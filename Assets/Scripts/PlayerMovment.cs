@@ -1,9 +1,19 @@
+using System;
 using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
     [SerializeField] private float speed = 1;
     [SerializeField] Rigidbody2D rb;
+    
+    public static PlayerMovment Instance;
+
+    private void Awake()
+    {
+        if (Instance == null) Instance = this;
+        else Destroy(this.gameObject);
+    }
+
     void Update()
     {
         Vector2 input = Vector2.zero;
