@@ -2,13 +2,21 @@ using UnityEngine;
 
 public class HandAlgae : MonoBehaviour
 {
-    void Start()
+    
+    [SerializeField] private float maxTimeToDestry = 15;
+    private float timeToDestry = 15;
+    private void Start()
     {
-        
+        timeToDestry = maxTimeToDestry;
     }
 
-    void Update()
+    private void Update()
     {
+        timeToDestry -= Time.deltaTime;
         
+        if (timeToDestry <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
