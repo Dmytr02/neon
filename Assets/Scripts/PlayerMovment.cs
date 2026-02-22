@@ -29,7 +29,7 @@ public class PlayerMovment : MonoBehaviour
             transform.Rotate(90, 0, 0);
             transform.Rotate(0, 90, 0);
         }*/
-        float angle = Mathf.Atan2(rb.velocity.y, rb.velocity.x) * Mathf.Rad2Deg;
+        float angle = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
         // Вычитаем 90, если спрайт изначально смотрит вверх, а не вправо
         if (angle < 90 && angle > -90) transform.rotation = Quaternion.Euler(0, 180, 90 - angle);
         else transform.rotation = Quaternion.Euler(0, 0, angle - 90f);
