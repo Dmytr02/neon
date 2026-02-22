@@ -21,7 +21,7 @@ public class HandCorall : MonoBehaviour
         
         if (timeToDestry <= 0)
         {
-            Debug.Log("Death");
+            DeathController.Instance.Death();
             Destroy(gameObject);
         }
     }
