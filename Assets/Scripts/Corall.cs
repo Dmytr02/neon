@@ -10,6 +10,9 @@ public class Corall : MonoBehaviour, IInteractable
         corall.localPosition = Vector3.zero;
         corall.localRotation = Quaternion.identity;
         
+        DeathController.Instance.handCorallPrefab = handCorallPrefab;
+        DeathController.Instance.respPos = interactor.transform.position;
+        
         Destroy(this);
     }
 }

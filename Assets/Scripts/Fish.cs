@@ -20,7 +20,7 @@ public class Fish : MonoBehaviour
             Collider2D overlap = Physics2D.OverlapCircle(transform.position, 0.5f, 1 << LayerMask.NameToLayer("Player"));
             if (overlap)
             {
-                Debug.Log("Death");
+                DeathController.Instance.Death();
             }
         }
         else
