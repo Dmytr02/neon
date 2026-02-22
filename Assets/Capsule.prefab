@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50fdc23d16f745e4785e9c1f1c713a84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HandAlgae
-  maxTimeToDestry: 20
+  maxTimeToDestry: 30
 --- !u!1001 &8424103154724646647
 PrefabInstance:
   m_ObjectHideFlags: 0
