@@ -26,11 +26,11 @@ public class Fish2 : MonoBehaviour
         {
             if (index == -1) index = Points.Select(((v, i) => new {v, i})).OrderByDescending(n => (n.v - (Vector2)transform.position).magnitude).Last().i;
             
-            Debug.Log(index);
+            /*Debug.Log(index);
             if ((Points[Mathf.Max(index-1, 0)] - (Vector2)transform.position).magnitude < 0.1f)
             {
                 index = Mathf.Max(index-1, 0);
-            }
+            }*/
             
             rb.linearVelocity += (Points[Mathf.Max(index-1, 0)] - (Vector2)transform.position).normalized * (speed * Time.deltaTime);
         }
