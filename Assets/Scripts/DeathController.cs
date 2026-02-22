@@ -7,6 +7,8 @@ public class DeathController : MonoBehaviour
 {
     [SerializeField] Image DeathPanel;
     [SerializeField] Interactor Interactor;
+    [SerializeField] AudioClip audioClip;
+    [SerializeField] AudioSource audioSource;
     public GameObject handCorallPrefab;
     public Vector2 respPos;
     
@@ -66,5 +68,6 @@ public class DeathController : MonoBehaviour
         }
         color.a = 0;
         DeathPanel.color = color;
+        audioSource.PlayOneShot(audioClip);
     }
 }
