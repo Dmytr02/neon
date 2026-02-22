@@ -11,6 +11,8 @@ public class PlayerMovment : MonoBehaviour
     {
         if (Instance == null) Instance = this;
         else Destroy(this.gameObject);
+        
+        gameObject.SetActive(false);
     }
 
     void Update()
