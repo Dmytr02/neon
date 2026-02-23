@@ -9,7 +9,6 @@ public class Fish1 : MonoBehaviour
     
     void Update()
     {
-        Debug.Log("sadasdasd");
         rb.linearVelocity += (Vector2)(PlayerMovment.Instance.transform.position - transform.position).normalized * (speed * Time.deltaTime);
         /*float angle = Mathf.Atan2(rb.linearVelocity.y, rb.linearVelocity.x) * Mathf.Rad2Deg;
         // Вычитаем 90, если спрайт изначально смотрит вверх, а не вправо
@@ -18,7 +17,7 @@ public class Fish1 : MonoBehaviour
         Collider2D overlap = Physics2D.OverlapCircle(transform.position, 10, 1 << LayerMask.NameToLayer("Player"));
         if (overlap)
         {
-            Debug.Log("Death");
+            DeathController.Instance.Death();
         }
     }
 
